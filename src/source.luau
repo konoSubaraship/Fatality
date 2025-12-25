@@ -1125,7 +1125,7 @@ function Fatality:RandomString() : string
 end;
 
 function Fatality:GetTextSize(Text : TextLabel,CustomFont: Enum.Font) : Vector2
-	return TextService:GetTextSize(Text.Text,Text.TextSize,(Text.Font ~= Enum.Font.Unknown and Text.Font) or (CustomFont or Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)),Vector2.new(math.huge,math.huge));
+	return TextService:GetTextSize(Text.Text,Text.TextSize,Enum.Font.Gotham,Vector2.new(math.huge,math.huge));
 end;
 
 function Fatality:IsMouseOverFrame(Frame : Frame) : boolean
@@ -6236,7 +6236,7 @@ function Fatality.new(Window: Window)
 		StyledTextLabel.Parent = RowLabel
 		StyledTextLabel.BackgroundTransparency = 1.000
 		StyledTextLabel.Size = UDim2.new(1, -52, 1, 0)
-		StyledTextLabel.FontFace = Enum.Font.BuilderSansBold
+		StyledTextLabel.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		StyledTextLabel.Text = Window.Name
 		StyledTextLabel.TextColor3 = Color3.fromRGB(247, 247, 248)
 		StyledTextLabel.TextScaled = true
@@ -6767,4 +6767,4 @@ end;
 
 Fatality.FATALITY_PID = Fatality:RandomString();
 
-return Fatality;
+return Fatality
