@@ -4449,7 +4449,7 @@ function Fatality.new(Window: Window)
 	HeaderText.Position = UDim2.new(0, 5, 0.5, 0)
 	HeaderText.Size = UDim2.new(0, 100, 0.699999988, 0)
 	HeaderText.ZIndex = 4
-	HeaderText.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	HeaderText.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 	HeaderText.Text = Window.Name
 	HeaderText.TextColor3 = Color3.fromRGB(229, 229, 229)
 	HeaderText.TextSize = 21.000
@@ -4530,7 +4530,7 @@ function Fatality.new(Window: Window)
 	User_name.Position = UDim2.new(1, -40, 0, 3)
 	User_name.Size = UDim2.new(0, 200, 0, 15)
 	User_name.ZIndex = 4
-	User_name.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+	User_name.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 	User_name.Text = Client.DisplayName;
 	User_name.TextColor3 = Color3.fromRGB(255, 255, 255)
 	User_name.TextSize = 13.000
@@ -4547,7 +4547,7 @@ function Fatality.new(Window: Window)
 	expire_days.Position = UDim2.new(1, -40, 0, 16)
 	expire_days.Size = UDim2.new(0, 200, 0, 15)
 	expire_days.ZIndex = 4
-	expire_days.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+	expire_days.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 	expire_days.Text = string.format("<font transparency=\"0.5\">expires:</font> <font color=\"#f53174\">%s</font>",Window.Expire)
 	expire_days.TextColor3 = Color3.fromRGB(255, 255, 255)
 	expire_days.TextSize = 12.000
@@ -4826,7 +4826,7 @@ function Fatality.new(Window: Window)
 		menu_name.Position = UDim2.new(0, 28, 0.5, 0)
 		menu_name.Size = UDim2.new(1, 0, 1, 0)
 		menu_name.ZIndex = 5
-		menu_name.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+		menu_name.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		menu_name.Text = Menu.Name
 		menu_name.TextColor3 = Color3.fromRGB(255, 255, 255)
 		menu_name.TextSize = 13.000
@@ -6236,7 +6236,7 @@ function Fatality.new(Window: Window)
 		StyledTextLabel.Parent = RowLabel
 		StyledTextLabel.BackgroundTransparency = 1.000
 		StyledTextLabel.Size = UDim2.new(1, -52, 1, 0)
-		StyledTextLabel.Font = Enum.Font.BuilderSansBold
+		StyledTextLabel.FontFace = Enum.Font.BuilderSansBold
 		StyledTextLabel.Text = Window.Name
 		StyledTextLabel.TextColor3 = Color3.fromRGB(247, 247, 248)
 		StyledTextLabel.TextScaled = true
@@ -6437,7 +6437,7 @@ function Fatality:Loader(Config: Loader)
 		ASCII.Position = UDim2.new(0.5, 0, 0.5, 0)
 		ASCII.Size = UDim2.new(0, 28, 0, 50)
 		ASCII.ZIndex = 8
-		ASCII.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+		ASCII.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		ASCII.Text = TEXT
 		ASCII.TextColor3 = Color3.fromRGB(255, 255, 255)
 		ASCII.TextSize = 50.000
@@ -6494,7 +6494,7 @@ function Fatality:Loader(Config: Loader)
 		StartText.Position = UDim2.new(0.5, 0, 0.5, 0)
 		StartText.Size = UDim2.new(0, 28, 0, 50)
 		StartText.ZIndex = 8
-		StartText.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+		StartText.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		StartText.Text = Config.Name:sub(1,1)
 		StartText.TextColor3 = Color3.fromRGB(255, 255, 255)
 		StartText.TextSize = 50.000
