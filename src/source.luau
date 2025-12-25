@@ -285,7 +285,7 @@ local Fatality = {};
 Fatality.Ascii = "qwertyuiopasdfghjklzxcvbnmQWRTYUIOPASDFGHJKLZXCVBNM";
 Fatality.GLOBAL_ENVIRONMENT = {};
 Fatality.Windows = {};
-Fatality.FontSemiBold = Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.SemiBold,Enum.FontStyle.Normal);
+Fatality.FontSemiBold = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
 Fatality.Flags = {};
 Fatality.Colors = {
 	Black = Color3.fromRGB(16, 16, 16),
@@ -1125,7 +1125,7 @@ function Fatality:RandomString() : string
 end;
 
 function Fatality:GetTextSize(Text : TextLabel,CustomFont: Enum.Font) : Vector2
-	return TextService:GetTextSize(Text.Text,Text.TextSize,(Text.Font ~= Enum.Font.Unknown and Text.Font) or (CustomFont or Enum.Font.GothamMedium),Vector2.new(math.huge,math.huge));
+	return TextService:GetTextSize(Text.Text,Text.TextSize,(Text.Font ~= Enum.Font.Unknown and Text.Font) or (CustomFont or Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)),Vector2.new(math.huge,math.huge));
 end;
 
 function Fatality:IsMouseOverFrame(Frame : Frame) : boolean
@@ -4449,7 +4449,7 @@ function Fatality.new(Window: Window)
 	HeaderText.Position = UDim2.new(0, 5, 0.5, 0)
 	HeaderText.Size = UDim2.new(0, 100, 0.699999988, 0)
 	HeaderText.ZIndex = 4
-	HeaderText.Font = Enum.Font.GothamBold
+	HeaderText.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 	HeaderText.Text = Window.Name
 	HeaderText.TextColor3 = Color3.fromRGB(229, 229, 229)
 	HeaderText.TextSize = 21.000
@@ -4530,7 +4530,7 @@ function Fatality.new(Window: Window)
 	User_name.Position = UDim2.new(1, -40, 0, 3)
 	User_name.Size = UDim2.new(0, 200, 0, 15)
 	User_name.ZIndex = 4
-	User_name.Font = Enum.Font.GothamMedium
+	User_name.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 	User_name.Text = Client.DisplayName;
 	User_name.TextColor3 = Color3.fromRGB(255, 255, 255)
 	User_name.TextSize = 13.000
@@ -4547,7 +4547,7 @@ function Fatality.new(Window: Window)
 	expire_days.Position = UDim2.new(1, -40, 0, 16)
 	expire_days.Size = UDim2.new(0, 200, 0, 15)
 	expire_days.ZIndex = 4
-	expire_days.Font = Enum.Font.GothamMedium
+	expire_days.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 	expire_days.Text = string.format("<font transparency=\"0.5\">expires:</font> <font color=\"#f53174\">%s</font>",Window.Expire)
 	expire_days.TextColor3 = Color3.fromRGB(255, 255, 255)
 	expire_days.TextSize = 12.000
@@ -4826,7 +4826,7 @@ function Fatality.new(Window: Window)
 		menu_name.Position = UDim2.new(0, 28, 0.5, 0)
 		menu_name.Size = UDim2.new(1, 0, 1, 0)
 		menu_name.ZIndex = 5
-		menu_name.Font = Enum.Font.GothamBold
+		menu_name.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		menu_name.Text = Menu.Name
 		menu_name.TextColor3 = Color3.fromRGB(255, 255, 255)
 		menu_name.TextSize = 13.000
@@ -6437,7 +6437,7 @@ function Fatality:Loader(Config: Loader)
 		ASCII.Position = UDim2.new(0.5, 0, 0.5, 0)
 		ASCII.Size = UDim2.new(0, 28, 0, 50)
 		ASCII.ZIndex = 8
-		ASCII.Font = Enum.Font.GothamBold
+		ASCII.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		ASCII.Text = TEXT
 		ASCII.TextColor3 = Color3.fromRGB(255, 255, 255)
 		ASCII.TextSize = 50.000
@@ -6494,7 +6494,7 @@ function Fatality:Loader(Config: Loader)
 		StartText.Position = UDim2.new(0.5, 0, 0.5, 0)
 		StartText.Size = UDim2.new(0, 28, 0, 50)
 		StartText.ZIndex = 8
-		StartText.Font = Enum.Font.GothamBold
+		StartText.Font = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 		StartText.Text = Config.Name:sub(1,1)
 		StartText.TextColor3 = Color3.fromRGB(255, 255, 255)
 		StartText.TextSize = 50.000
@@ -6683,8 +6683,8 @@ function Fatality:CreateNotifier(): Notifier
 			BodyText.TextYAlignment = Enum.TextYAlignment.Top
 
 			local updateScale = function()
-				local TitleScale = Fatality:GetTextSize(HeaderText,Enum.Font.GothamBold);
-				local ContentScale = Fatality:GetTextSize(BodyText,Enum.Font.GothamMedium);
+				local TitleScale = Fatality:GetTextSize(HeaderText,Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal));
+				local ContentScale = Fatality:GetTextSize(BodyText,Font.new("rbxassetid://12187365364", Enum.FontWeight.Medium, Enum.FontStyle.Normal));
 
 				local XScale = (TitleScale.X > ContentScale.X and TitleScale.X) or ContentScale.X;
 				local YScale = (TitleScale.Y > ContentScale.Y and TitleScale.Y) or ContentScale.Y;
